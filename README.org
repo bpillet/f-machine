@@ -1,0 +1,35 @@
+#+TITLE: f-machine
+
+#+BEGIN_abstract
+A simple factorisation "mechanical" machine ; great for vulgarisation :school_satchel:
+#+END_abstract
+
+* Examples
+** Factorisation de 6
+| o |    |    |    |
+| o | o  |    |    |
+| o | o  | o  |    |
+| o | o  | o  | oo |
+| o | o  | oo | oo |
+| o | oo | oo | oo |
+** Factorisation de 9
+| o |    |    |    |    |     |     |     |
+| o | o  |    |    |    |     |     |     |
+| o | o  | o  |    |    |     |     |     |
+| o | o  | o  | o  |    |     |     |     |
+| o | o  | o  | o  | o  |     |     |     |
+| o | o  | o  | o  | oo | oo  | o   |     |
+| o | o  | o  | oo | oo | oo  | oo  | ooo |
+| o | o  | oo | oo | oo | oo  | ooo | ooo |
+| o | oo | oo | oo | oo | ooo | ooo | ooo |
+
+* Autre
+** Critère d'arrêt
+(Poids colonnes égaux) et ((poids colonne 2) > 0)
+
+Remarque : La factorisation s'arrête au premier diviseur (premier) qui se trouve être le nombre de colonnes.
+** Langage
+- Ocaml ?
+- Lisp ?
+*** Version web
+*** Version arduino
