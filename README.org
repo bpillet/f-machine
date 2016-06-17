@@ -4,31 +4,37 @@
 A simple factorisation "mechanical" machine ; great for vulgarisation :school_satchel:
 #+END_abstract
 
+An integer is a (finite) set of marbles. Factorising this integer is equivalent to laying the marbles into a rectangle.
+
+The machine starts with all marble in a column (width-1 rectangle which amounts to the $n = 1×n$ factorisation). Then iteratively push the topmost marble so that it falls in the next column ; an so until a (width>1) rectangle is constructed.
+
+There are special rules about what should be considered the "topmost" marble when several columns have the same height. But it can be made clear with intuitive rules using gravity (just assume the frame is a bit tilted to the left, so that the initial column is more stable, and marbles on the same row tends to go to that first column).
+
 * Examples
-** Factorisation de 6
-| o |    |    |    |
-| o | o  |    |    |
-| o | o  | o  |    |
+** Factorisation of 6
+| ⊗ |    |    |    |
+| o | ⊗  |    |    |
+| o | o  | ⊗  |    |
 | o | o  | o  | oo |
 | o | o  | oo | oo |
 | o | oo | oo | oo |
-** Factorisation de 9
-| o |    |    |    |    |     |     |     |
-| o | o  |    |    |    |     |     |     |
-| o | o  | o  |    |    |     |     |     |
-| o | o  | o  | o  |    |     |     |     |
-| o | o  | o  | o  | o  |     |     |     |
-| o | o  | o  | o  | oo | oo  | o   |     |
+** Factorisation of 9
+| ⊗ |    |    |    |    |     |     |     |
+| o | ⊗  |    |    |    |     |     |     |
+| o | o  | ⊗  |    |    |     |     |     |
+| o | o  | o  | ⊗  |    |     |     |     |
+| o | o  | o  | o  | ⊗  |     |     |     |
+| o | o  | o  | o  | oo | o⊗  | ⊗   |     |
 | o | o  | o  | oo | oo | oo  | oo  | ooo |
 | o | o  | oo | oo | oo | oo  | ooo | ooo |
 | o | oo | oo | oo | oo | ooo | ooo | ooo |
 
-* Autre
-** Critère d'arrêt
-(Poids colonnes égaux) et ((poids colonne 2) > 0)
+* Misc
+** Stop criterion
+   (columns weight are equals or nil) et ((2nd column weight) > 0)
 
-Remarque : La factorisation s'arrête au premier diviseur (premier) qui se trouve être le nombre de colonnes.
-** Langage
+Remark : La factorisation s'arrête au premier diviseur (premier) qui se trouve être le nombre de colonnes.
+** Language
 - Ocaml ?
 - Lisp ?
 *** Version web
